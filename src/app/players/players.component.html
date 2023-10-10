@@ -1,0 +1,33 @@
+<div style="text-align: center;color: blue;">
+    <h1>Add Players</h1>
+</div>
+<div class="container">
+    <form #addplayers="ngForm" (ngSubmit)="submit(addplayers)">
+        <div class="form-group">
+            <label>Player Name</label>
+            <input #name="ngModel" [(ngModel)]="pname" [ngModelOptions]="{standalone:true}" required type="text" class="form-control" id="pname" placeholder="Enter PlayerName" ngModel name="pname">
+        </div> 
+        <div class="form-group">
+            <label>Player Category</label>
+            <input #name="ngModel" [(ngModel)]="pcategory" [ngModelOptions]="{standalone:true}" required type="text" class="form-control" id="pcategory" placeholder="Enter PlayerCategory" ngModel name="pcategory">
+        </div>
+        <div class="form-group">
+            <label>Player Country</label>
+            <input #name="ngModel" [(ngModel)]="pcountry" [ngModelOptions]="{standalone:true}" required type="text" class="form-control" id="pcountry" placeholder="Enter PlayerCountry" ngModel name="pcountry">
+        </div> 
+        <div class="form-group">
+            <label>Player Age</label>
+            <input #name="ngModel" [(ngModel)]="page" [ngModelOptions]="{standalone:true}" required type="text" class="form-control" id="page" placeholder="Enter PlayerAge" ngModel name="page">
+        </div>  
+        <div class="form-group">
+            <label>Player Budget</label>
+            <input #name="ngModel" [(ngModel)]="pbudget" [ngModelOptions]="{standalone:true}" required type="text" class="form-control" id="pbudget" placeholder="Enter PlayerBudget" ngModel name="pbudget">
+        </div>      
+        
+        <button type="submit" class="btn btn-primary">Add Player</button>&nbsp;
+  
+    </form>
+</div>
+        
+        
+

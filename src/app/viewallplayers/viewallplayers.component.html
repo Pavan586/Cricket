@@ -1,0 +1,26 @@
+<div style="text-align: center;color: blue;">
+    <h1>All Players</h1>
+  </div>
+<div>
+    <a routerLink="/viewallplayers" class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"></i>View All Players</a>
+    <table class="table table-bordered">
+        <thead>
+            <th>Player Id</th>
+            <th>Player Name</th>
+            <th>Player Category</th>
+            <th>Player Country</th>
+            <th>Player Age</th>
+            <th>Player Budget</th>
+        </thead>
+        <tbody *ngFor="let p of players">
+            <tr>
+                <td>{{p.pid}}</td>
+                <td>{{p.pname}}</td>
+                <td>{{p.pcategory}}</td>
+                <td>{{p.pcountry}}</td>
+                <td>{{p.page}}</td>
+                <td>{{p.pbudget}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,17 @@
+ul {
+    list-style-type: disc;
+    margin: 10px 10px;
+    padding: 14px 16px;
+    overflow: hidden;
+    background-color: aqua;
+    width:100%;
+    left:0;
+}
+li {
+    float: left;
+    display: inline-flex;
+    padding: 10px;
+}
+nav-container ul li {
+    width: 20%;
+}

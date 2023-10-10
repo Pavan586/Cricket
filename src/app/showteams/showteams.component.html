@@ -1,0 +1,26 @@
+<div style="text-align: center;color: blue;">
+    <h1>All Teams</h1>
+  </div>
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <th>Team Id</th>
+            <th>Team Name</th>
+            <th>Team Budget</th>
+            <th>Action</th>
+        </thead>
+        <tbody *ngFor="let t of teams">
+            <tr>
+                <td>{{t.tid}}</td>
+                <td>{{t.tname}}</td>
+                <td>{{t.tbudget}}</td>
+                <td><a routerLink="/update/{{t.tid}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o"></i>Update</a>&nbsp;
+                    <button (click)="deleteTeam(t.tid)" class="btn btn-danger btn-sm">Delete</button>&nbsp;
+                    <a routerLink="/addplayers/{{t.tid}}" class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"></i>Add Player</a>&nbsp;
+                    <a routerLink="/viewplayers/{{t.tname}}" class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"></i>View Players</a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

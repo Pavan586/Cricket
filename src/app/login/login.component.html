@@ -1,0 +1,35 @@
+<div style="text-align: center;color: blue;">
+    <h1>Login Form</h1>
+</div>
+<div class="container">
+    <form #login="ngForm" (ngSubmit)="submit(login)">
+        <div class="form-group">
+            <label>Email</label>
+            <input #email="ngModel" [(ngModel)]="loginEmail"[ngModelOptions]="{standalone:true}" required type="email" class="form-control" id="uemail" placeholder="Enter Email" ngModel name="uemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            <div *ngIf="email.touched && email.errors?.['required']" class="alert alert-danger">
+                Email is required
+            </div>
+            <div *ngIf="email.touched && email.errors?.['pattern']" class="alert alert-danger">
+                Email is not a valid
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input #pass="ngModel" [(ngModel)]="loginPassword"[ngModelOptions]="{standalone:true}" type="password" required minlength="5" maxlength="12"class="form-control" id="password" placeholder="Enter Password" ngModel name="upass" pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{5,12}">
+            <div *ngIf="pass.touched && pass.errors?.['required']" class="alert alert-danger">
+                Password is required
+            </div>
+            <div *ngIf="pass.touched && pass.errors?.['minlength']" class="alert alert-danger">
+                Password Must be 5 characters
+            </div>
+            <div *ngIf="pass.touched && pass.errors?.['pattern']" class="alert alert-danger">
+                Password must contains one special character,one uppercase and one numeric
+            </div>
+        </div>
+        
+        
+        <button type="submit" class="btn btn-primary">Login</button>&nbsp;
+        <span>New User ?</span> &nbsp;
+        <button class="btn btn-primary" (click)="onRegister()">Register</button>
+    </form>
+</div>

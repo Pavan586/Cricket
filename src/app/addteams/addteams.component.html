@@ -1,0 +1,20 @@
+<div style="text-align: center;color: blue;">
+    <h1>Add Teams</h1>
+</div>
+<div class="container">
+    <form #addteams="ngForm" (ngSubmit)="submit(addteams)">
+        <div class="form-group">
+            <label>Team Name</label>
+            <input #name="ngModel" [(ngModel)]="tname"[ngModelOptions]="{standalone:true}" required type="text" class="form-control" id="tname" placeholder="Enter TeamName" ngModel name="tname">
+        </div>  
+        <div class="form-group">
+            <label>Team Budget</label>
+            <input #name="ngModel" [(ngModel)]="tbudget"[ngModelOptions]="{standalone:true}" required type="text" class="form-control" id="tbudget" placeholder="Enter TeamBudget" ngModel name="tbudget">
+        </div> 
+        <button type="submit" class="btn btn-primary">Add Team</button>&nbsp;
+  
+    </form>
+</div>
+        
+        
+

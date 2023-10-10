@@ -1,0 +1,31 @@
+<div style="text-align: center;color: blue;">
+    <h1>All {{title}} Players</h1>
+  </div>
+<div>
+    <a routerLink="/viewallplayers" class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"></i>View All Players</a>
+    <table class="table table-bordered">
+        <thead>
+            <th>Player Id</th>
+            <th>Player Name</th>
+            <th>Player Category</th>
+            <th>Player Country</th>
+            <th>Player Age</th>
+            <th>Player Budget</th>
+            <th>Action</th>
+        </thead>
+        <tbody *ngFor="let p of players">
+            <tr>
+                <td>{{p.pid}}</td>
+                <td>{{p.pname}}</td>
+                <td>{{p.pcategory}}</td>
+                <td>{{p.pcountry}}</td>
+                <td>{{p.page}}</td>
+                <td>{{p.pbudget}}</td>
+                <td><a routerLink="/updateplayer/{{p.pid}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o"></i>Update</a>&nbsp;
+                    <button (click)="deletePlayer(p.pid)" class="btn btn-danger btn-sm">Delete</button>&nbsp;
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
